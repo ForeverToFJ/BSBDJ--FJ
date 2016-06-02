@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FJTopicVoiceView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="302"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tiX-94-sc4">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="302"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HDa-4Y-M2y" userLabel="播放次数">
+                    <rect key="frame" x="267" y="0.0" width="33" height="16"/>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdC-GU-5Za" userLabel="播放时长">
+                    <rect key="frame" x="267" y="286" width="33" height="16"/>
+                    <color key="backgroundColor" white="0.33333333329999998" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7E-si-GGR">
+                    <rect key="frame" x="118.5" y="119.5" width="63" height="63"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="63" id="O54-db-7ri"/>
+                        <constraint firstAttribute="height" constant="63" id="aoL-ff-hMC"/>
+                    </constraints>
+                    <state key="normal" image="playButtonPlay" backgroundImage="playButton"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.86033653850000003" green="0.86033653850000003" blue="0.86033653850000003" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cdC-GU-5Za" secondAttribute="trailing" id="GBU-dZ-g0c"/>
+                <constraint firstItem="U7E-si-GGR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NrZ-Ze-IGA"/>
+                <constraint firstAttribute="bottom" secondItem="cdC-GU-5Za" secondAttribute="bottom" id="Uz9-aX-FjO"/>
+                <constraint firstAttribute="trailing" secondItem="tiX-94-sc4" secondAttribute="trailing" id="b8L-7g-Wtb"/>
+                <constraint firstItem="HDa-4Y-M2y" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dEm-r8-uei"/>
+                <constraint firstAttribute="trailing" secondItem="HDa-4Y-M2y" secondAttribute="trailing" id="eqP-oC-WDC"/>
+                <constraint firstAttribute="bottom" secondItem="tiX-94-sc4" secondAttribute="bottom" id="kdX-EE-2Xg"/>
+                <constraint firstItem="tiX-94-sc4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="oJx-Jm-g4K"/>
+                <constraint firstItem="U7E-si-GGR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="pus-hz-n3d"/>
+                <constraint firstItem="tiX-94-sc4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="v3T-ZH-rAN"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="tiX-94-sc4" id="Nzq-Az-7yI"/>
+                <outlet property="playcount" destination="HDa-4Y-M2y" id="fp4-T6-fpz"/>
+                <outlet property="voicetime" destination="cdC-GU-5Za" id="zrp-am-Rtn"/>
+            </connections>
+            <point key="canvasLocation" x="32" y="188"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="playButton" width="63" height="63"/>
+        <image name="playButtonPlay" width="30" height="30"/>
+    </resources>
+</document>

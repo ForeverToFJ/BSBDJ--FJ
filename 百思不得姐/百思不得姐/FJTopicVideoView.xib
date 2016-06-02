@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="pdq-pa-MYT" customClass="FJTopicVideoView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="302"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4sF-5x-jjC">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="302"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OR3-oE-0xx" userLabel="播放次数">
+                    <rect key="frame" x="267" y="0.0" width="33" height="16"/>
+                    <color key="backgroundColor" white="0.33333333329999998" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpj-b5-k5X" userLabel="播放时长">
+                    <rect key="frame" x="267" y="286" width="33" height="16"/>
+                    <color key="backgroundColor" white="0.33333333329999998" alpha="0.5" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQs-7v-5Dq">
+                    <rect key="frame" x="118.5" y="119.5" width="63" height="63"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="63" id="p6b-cm-JIk"/>
+                        <constraint firstAttribute="width" constant="63" id="ue3-H4-82l"/>
+                    </constraints>
+                    <state key="normal" image="video-play"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.86033653850000003" green="0.86033653850000003" blue="0.86033653850000003" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="xpj-b5-k5X" secondAttribute="bottom" id="Bdq-aP-fIr"/>
+                <constraint firstAttribute="trailing" secondItem="xpj-b5-k5X" secondAttribute="trailing" id="KMj-RM-mTo"/>
+                <constraint firstAttribute="trailing" secondItem="OR3-oE-0xx" secondAttribute="trailing" id="LwB-aN-bgT"/>
+                <constraint firstItem="iQs-7v-5Dq" firstAttribute="centerX" secondItem="pdq-pa-MYT" secondAttribute="centerX" id="MR0-DK-4dc"/>
+                <constraint firstItem="iQs-7v-5Dq" firstAttribute="centerY" secondItem="pdq-pa-MYT" secondAttribute="centerY" id="YLI-OQ-ROW"/>
+                <constraint firstItem="OR3-oE-0xx" firstAttribute="top" secondItem="pdq-pa-MYT" secondAttribute="top" id="aW8-9a-fYS"/>
+                <constraint firstItem="4sF-5x-jjC" firstAttribute="leading" secondItem="pdq-pa-MYT" secondAttribute="leading" id="gdo-oI-F4w"/>
+                <constraint firstAttribute="bottom" secondItem="4sF-5x-jjC" secondAttribute="bottom" id="nDb-fb-Py2"/>
+                <constraint firstAttribute="trailing" secondItem="4sF-5x-jjC" secondAttribute="trailing" id="rG1-2F-fET"/>
+                <constraint firstItem="4sF-5x-jjC" firstAttribute="top" secondItem="pdq-pa-MYT" secondAttribute="top" id="vVr-cG-Iiy"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="4sF-5x-jjC" id="VAf-mM-l9v"/>
+                <outlet property="playCount" destination="OR3-oE-0xx" id="zc9-XI-5pa"/>
+                <outlet property="videoTime" destination="xpj-b5-k5X" id="67b-cj-Npg"/>
+            </connections>
+            <point key="canvasLocation" x="32" y="188"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="video-play" width="71" height="71"/>
+    </resources>
+</document>
