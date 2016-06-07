@@ -19,10 +19,11 @@ static NSInteger count = 1;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UILabel *playcount;
 @property (weak, nonatomic) IBOutlet UILabel *voicetime;
+
 /**
  *  音乐播放器
  */
-//@property (nonatomic, strong) AVPlayer *player;
+@property (nonatomic, strong) AVPlayer *player;
 /**
  *  上一次的url
  */
@@ -35,8 +36,14 @@ static NSInteger count = 1;
 @end
 
 @implementation FJTopicVoiceView
-{
-    NSInteger count_;
+
+- (AVPlayer *)player {
+    if (!_player) {
+        AVPlayerItem *playItem = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:self.topic.voiceuri]];
+        
+        _player = [AVPlayer playerWithPlayerItem:playItem];
+    }
+    return _player;
 }
 
 + (instancetype)voiceView {
@@ -59,25 +66,38 @@ static NSInteger count = 1;
 }
 
 - (void)showVoice {
+ 
+    AVPlayer *player = [[AVPlayer alloc] init];
     
-
-    [self.lastPlayer pause];
-    
-    NSLog(@"%zd", count);
-    // 创建播放器
-    if (![self.lastVoiceURL isEqualToString:self.topic.voiceuri] || count % 2 == 1) {
-        AVPlayer *player = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:self.topic.voiceuri]];
+    if ([self.lastVoiceURL isEqualToString:self.topic.voiceuri] && count % 2 == 0) {
+        NSLog(@"1");
+        [self.lastPlayer pause];
+    }
+    else if ([self.lastVoiceURL isEqualToString:self.topic.voiceuri] && count % 2 == 1) {
+        NSLog(@"2");
+        [self.lastPlayer play];
+    }
+    else {
+        NSLog(@"3");
+//        [self.lastPlayer stop];
+        [self.lastPlayer pause];
+        self.lastPlayer = nil;
+        count = 1;
+        
+        // 创建播放器
+        NSLog(@"%@", self.topic.voiceuri);
+        AVPlayerItem *nextPlayer = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:self.topic.voiceuri]];
         self.lastVoiceURL = self.topic.voiceuri;
+        player = [AVPlayer playerWithPlayerItem:nextPlayer];
         self.lastPlayer = player;
         
         // 播放
-        [player play];
+        [self.lastPlayer play];
     }
+    NSLog(@"4");
     count++;
-
-    // 缓冲
-//    [self.audioPlayer prepareToPlay];
-
+    
+//    NSLog(@"%@--%@", self.player, self.lastPlayer);
 }
 
 - (void)setTopic:(FJTopic *)topic {

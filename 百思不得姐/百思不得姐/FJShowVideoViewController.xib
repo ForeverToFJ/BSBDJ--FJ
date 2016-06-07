@@ -12,9 +12,39 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ySu-IG-aMI">
+                    <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMR-bi-kZl">
+                            <rect key="frame" x="8" y="5" width="32" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <state key="normal" title="返回">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="back" destination="-1" eventType="touchUpInside" id="vkp-3f-Fi0"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="FMR-bi-kZl" secondAttribute="bottom" constant="7" id="HCT-h1-seU"/>
+                        <constraint firstItem="FMR-bi-kZl" firstAttribute="leading" secondItem="ySu-IG-aMI" secondAttribute="leading" constant="8" id="bBg-U3-OFe"/>
+                        <constraint firstAttribute="height" constant="44" id="iUU-G4-J2o"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ySu-IG-aMI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VhO-yx-aCf"/>
+                <constraint firstAttribute="trailing" secondItem="ySu-IG-aMI" secondAttribute="trailing" id="avY-qh-z7v"/>
+                <constraint firstItem="ySu-IG-aMI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="vb5-tN-th1"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+            <point key="canvasLocation" x="254" y="294"/>
         </view>
     </objects>
 </document>

@@ -10,6 +10,7 @@
 #import "FJTopic.h"
 #import "UIImageView+WebCache.h"
 #import "FJShowVideoViewController.h"
+#import "FJShowVideoVC.h"
 
 @interface FJTopicVideoView ()
 

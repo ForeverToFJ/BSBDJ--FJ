@@ -13,6 +13,11 @@
 		A61E04381CE1751900422219 /* FJVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = A61E04371CE1751900422219 /* FJVerticalButton.m */; };
 		A61FAE1F1CE5B61800069E48 /* Foundation+YPLog.m in Sources */ = {isa = PBXBuildFile; fileRef = A61FAE1E1CE5B61800069E48 /* Foundation+YPLog.m */; };
 		A62882FD1CFEC8160049B5DD /* FJSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A62882FC1CFEC8160049B5DD /* FJSettingViewController.m */; };
+		A62883791D000D000049B5DD /* 14945107.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A62883781D000D000049B5DD /* 14945107.mp3 */; };
+		A6345F361D0675F500C68D63 /* VideoPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A6345F321D0675F500C68D63 /* VideoPlayView.m */; };
+		A6345F371D0675F500C68D63 /* VideoPlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6345F331D0675F500C68D63 /* VideoPlayView.xib */; };
+		A6345F381D0675F500C68D63 /* FullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A6345F351D0675F500C68D63 /* FullViewController.m */; };
+		A6345F3B1D0676E500C68D63 /* FJShowVideoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A6345F3A1D0676E500C68D63 /* FJShowVideoVC.m */; };
 		A636870B1CE30C1B00D54245 /* FJTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A636870A1CE30C1B00D54245 /* FJTextField.m */; };
 		A63BC7071CE487A000DD67CA /* UIColor+ColorValue.m in Sources */ = {isa = PBXBuildFile; fileRef = A63BC7041CE487A000DD67CA /* UIColor+ColorValue.m */; };
 		A63BC7081CE487A000DD67CA /* UITextField+PlaceStringColor.m in Sources */ = {isa = PBXBuildFile; fileRef = A63BC7061CE487A000DD67CA /* UITextField+PlaceStringColor.m */; };
@@ -114,6 +119,14 @@
 		A61FAE1E1CE5B61800069E48 /* Foundation+YPLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+YPLog.m"; sourceTree = "<group>"; };
 		A62882FB1CFEC8160049B5DD /* FJSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJSettingViewController.h; sourceTree = "<group>"; };
 		A62882FC1CFEC8160049B5DD /* FJSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJSettingViewController.m; sourceTree = "<group>"; };
+		A62883781D000D000049B5DD /* 14945107.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 14945107.mp3; sourceTree = "<group>"; };
+		A6345F311D0675F500C68D63 /* VideoPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayView.h; sourceTree = "<group>"; };
+		A6345F321D0675F500C68D63 /* VideoPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayView.m; sourceTree = "<group>"; };
+		A6345F331D0675F500C68D63 /* VideoPlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoPlayView.xib; sourceTree = "<group>"; };
+		A6345F341D0675F500C68D63 /* FullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullViewController.h; sourceTree = "<group>"; };
+		A6345F351D0675F500C68D63 /* FullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FullViewController.m; sourceTree = "<group>"; };
+		A6345F391D0676E500C68D63 /* FJShowVideoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJShowVideoVC.h; sourceTree = "<group>"; };
+		A6345F3A1D0676E500C68D63 /* FJShowVideoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJShowVideoVC.m; sourceTree = "<group>"; };
 		A63687091CE30C1B00D54245 /* FJTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FJTextField.h; sourceTree = "<group>"; };
 		A636870A1CE30C1B00D54245 /* FJTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FJTextField.m; sourceTree = "<group>"; };
 		A63BC7031CE487A000DD67CA /* UIColor+ColorValue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+ColorValue.h"; sourceTree = "<group>"; };
@@ -321,6 +334,8 @@
 				A6EF176A1CF44E6D004B1263 /* FJShowVideoViewController.h */,
 				A6EF176B1CF44E6D004B1263 /* FJShowVideoViewController.m */,
 				A6EF176C1CF44E6D004B1263 /* FJShowVideoViewController.xib */,
+				A6345F391D0676E500C68D63 /* FJShowVideoVC.h */,
+				A6345F3A1D0676E500C68D63 /* FJShowVideoVC.m */,
 			);
 			name = "视频";
 			sourceTree = "<group>";
@@ -347,6 +362,7 @@
 		A63BC8681CF3F6FC00893ABC /* 声音 */ = {
 			isa = PBXGroup;
 			children = (
+				A62883781D000D000049B5DD /* 14945107.mp3 */,
 				A63BC86F1CF3F7A500893ABC /* FJTopicVoiceView.h */,
 				A63BC8701CF3F7A500893ABC /* FJTopicVoiceView.m */,
 				A63BC8721CF3F7BB00893ABC /* FJTopicVoiceView.xib */,
@@ -388,6 +404,11 @@
 		A63BC86D1CF3F71900893ABC /* 视频 */ = {
 			isa = PBXGroup;
 			children = (
+				A6345F311D0675F500C68D63 /* VideoPlayView.h */,
+				A6345F321D0675F500C68D63 /* VideoPlayView.m */,
+				A6345F331D0675F500C68D63 /* VideoPlayView.xib */,
+				A6345F341D0675F500C68D63 /* FullViewController.h */,
+				A6345F351D0675F500C68D63 /* FullViewController.m */,
 			);
 			name = "视频";
 			sourceTree = "<group>";
@@ -905,6 +926,7 @@
 				A63E4BA01CE4500A00A89020 /* FJPushGuideView.xib in Resources */,
 				A648127F1CEDB3D100C10CC5 /* FJPublishViewController.xib in Resources */,
 				A648495A1CE9A62600925BC3 /* FJTopicCell.xib in Resources */,
+				A62883791D000D000049B5DD /* 14945107.mp3 in Resources */,
 				A6FE1D3B1CFD42D2008E034F /* FJWebViewController.xib in Resources */,
 				A643F3DB1CEC4782009EDAD1 /* FJTopicPictureView.xib in Resources */,
 				A67654661CDC8287004F0491 /* FJRecommendUserCell.xib in Resources */,
@@ -913,6 +935,7 @@
 				A699EFC01CF57395005BD5ED /* FJCommentViewController.xib in Resources */,
 				A67654611CDC70AD004F0491 /* FJRecommendCategoryCell.xib in Resources */,
 				A67650E81CDB33FC004F0491 /* LaunchScreen.storyboard in Resources */,
+				A6345F371D0675F500C68D63 /* VideoPlayView.xib in Resources */,
 				A63BC8731CF3F7BB00893ABC /* FJTopicVoiceView.xib in Resources */,
 				A67650E51CDB33FC004F0491 /* Assets.xcassets in Resources */,
 				A67653C61CDC3FE5004F0491 /* FJRecommendViewController.xib in Resources */,
@@ -1003,6 +1026,8 @@
 				A67654691CDC85B0004F0491 /* FJRecommendUser.m in Sources */,
 				A67653C51CDC3FE5004F0491 /* FJRecommendViewController.m in Sources */,
 				A676511C1CDB345E004F0491 /* UIView+FJExtension.m in Sources */,
+				A6345F3B1D0676E500C68D63 /* FJShowVideoVC.m in Sources */,
+				A6345F361D0675F500C68D63 /* VideoPlayView.m in Sources */,
 				A6FE1D2D1CFD3CF6008E034F /* FJMeFooterView.m in Sources */,
 				A699EFBF1CF57395005BD5ED /* FJCommentViewController.m in Sources */,
 				A62882FD1CFEC8160049B5DD /* FJSettingViewController.m in Sources */,
@@ -1016,6 +1041,7 @@
 				A63BC7071CE487A000DD67CA /* UIColor+ColorValue.m in Sources */,
 				A67651441CDB3ED2004F0491 /* FJNavigationController.m in Sources */,
 				A67651101CDB343B004F0491 /* FJTabBar.m in Sources */,
+				A6345F381D0675F500C68D63 /* FullViewController.m in Sources */,
 				A64849591CE9A62600925BC3 /* FJTopicCell.m in Sources */,
 				A6FE1D331CFD405A008E034F /* FJSqaureButton.m in Sources */,
 				A699F05D1CF7E0CC005BD5ED /* FJCommentHeaderView.m in Sources */,

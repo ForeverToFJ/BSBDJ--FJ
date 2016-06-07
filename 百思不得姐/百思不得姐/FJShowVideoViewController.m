@@ -74,7 +74,7 @@
     if (!_movie) {
         NSURL *url = [self getNetworkUrl];
         _movie=[[MPMoviePlayerController alloc] initWithContentURL:url];
-        _movie.view.frame = self.view.bounds;
+        _movie.view.frame = CGRectMake(0, 64, FJScreenW, FJScreenH - 64);
         _movie.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [self.view addSubview:_movie.view];
     }
@@ -125,24 +125,25 @@
 }
 
 - (void)movieFinishedCallback:(NSNotification *)notify {
-    FJLogFunc
     MPMoviePlayerController *theMovie = [notify object];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:MPMoviePlayerPlaybackDidFinishNotification object:theMovie];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-    FJLogFunc
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [self.movie stop];
+    self.movie = nil;
 }
 
-- (void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-    FJLogFunc
-}
-
-- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event {
-    FJLogFunc
+- (IBAction)back {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - 状态栏文字颜色
+- (UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleLightContent;
 }
 
 @end
