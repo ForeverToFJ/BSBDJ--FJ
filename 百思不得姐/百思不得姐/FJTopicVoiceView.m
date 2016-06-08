@@ -11,8 +11,10 @@
 #import "FJTopic.h"
 #import "FJShowPictureViewController.h"
 #import <AVFoundation/AVFoundation.h>
+#import <MediaPlayer/MediaPlayer.h>
 
 static NSInteger count = 1;
+static NSString *lastUrl = nil;
 
 @interface FJTopicVoiceView ()
 
@@ -31,11 +33,23 @@ static NSInteger count = 1;
 /**
  *  上一次的播放器
  */
-@property (nonatomic, strong) AVPlayer *lastPlayer;
+@property (nonatomic, weak) AVPlayer *lastPlayer;
+/**
+ *  <#注释#>
+ */
+@property (nonatomic, strong) MPMoviePlayerController *moviePlayer;
 
 @end
 
 @implementation FJTopicVoiceView
+
+- (MPMoviePlayerController *)moviePlayer {
+    if (!_moviePlayer) {
+        _moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL URLWithString:self.topic.voiceuri]];
+        _moviePlayer.controlStyle = MPMovieControlStyleNone;
+    }
+    return _moviePlayer;
+}
 
 - (AVPlayer *)player {
     if (!_player) {
@@ -67,37 +81,41 @@ static NSInteger count = 1;
 
 - (void)showVoice {
  
-    AVPlayer *player = [[AVPlayer alloc] init];
-    
-    if ([self.lastVoiceURL isEqualToString:self.topic.voiceuri] && count % 2 == 0) {
-        NSLog(@"1");
-        [self.lastPlayer pause];
+    if ([lastUrl isEqualToString:self.topic.voiceuri] && count % 2 == 0) {
+//        NSLog(@"1");
+//        [self.player pause];
+        [self.moviePlayer stop];
     }
-    else if ([self.lastVoiceURL isEqualToString:self.topic.voiceuri] && count % 2 == 1) {
-        NSLog(@"2");
-        [self.lastPlayer play];
+    else if ([lastUrl isEqualToString:self.topic.voiceuri] && count % 2 == 1) {
+//        NSLog(@"2");
+//        [self.player play];
+        [self.moviePlayer play];
     }
     else {
-        NSLog(@"3");
+//        NSLog(@"3");
 //        [self.lastPlayer stop];
-        [self.lastPlayer pause];
-        self.lastPlayer = nil;
+        NSLog(@"%@", lastUrl);
+//        [self.player pause];
+//        self.player = nil;
+        [self.moviePlayer stop];
+        self.moviePlayer = nil;
         count = 1;
         
         // 创建播放器
-        NSLog(@"%@", self.topic.voiceuri);
+//        NSLog(@"%@", self.topic.voiceuri);
         AVPlayerItem *nextPlayer = [AVPlayerItem playerItemWithURL:[NSURL URLWithString:self.topic.voiceuri]];
-        self.lastVoiceURL = self.topic.voiceuri;
-        player = [AVPlayer playerWithPlayerItem:nextPlayer];
-        self.lastPlayer = player;
+        lastUrl = self.topic.voiceuri;
+        self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL URLWithString:self.topic.voiceuri]];
+//        [self.player replaceCurrentItemWithPlayerItem:nextPlayer];
+//        self.player = [[AVPlayer alloc] initWithURL:[NSURL URLWithString:self.topic.voiceuri]];
+//        self.lastPlayer = self.player;
         
         // 播放
-        [self.lastPlayer play];
+//        [self.player play];
+        [self.moviePlayer play];
     }
-    NSLog(@"4");
+//    NSLog(@"4");
     count++;
-    
-//    NSLog(@"%@--%@", self.player, self.lastPlayer);
 }
 
 - (void)setTopic:(FJTopic *)topic {

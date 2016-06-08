@@ -29,7 +29,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="FMR-bi-kZl" secondAttribute="bottom" constant="7" id="HCT-h1-seU"/>
                         <constraint firstItem="FMR-bi-kZl" firstAttribute="leading" secondItem="ySu-IG-aMI" secondAttribute="leading" constant="8" id="bBg-U3-OFe"/>
@@ -37,7 +37,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="ySu-IG-aMI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VhO-yx-aCf"/>
                 <constraint firstAttribute="trailing" secondItem="ySu-IG-aMI" secondAttribute="trailing" id="avY-qh-z7v"/>

@@ -45,8 +45,6 @@
     // 显示推送引导
     [FJPushGuideView show];
 
-    
-    
     return YES;
 }
 
